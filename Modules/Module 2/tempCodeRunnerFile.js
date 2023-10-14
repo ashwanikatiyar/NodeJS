@@ -1,0 +1,1 @@
+fs.mkdirSync('make_directory')

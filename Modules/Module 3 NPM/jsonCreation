@@ -1,0 +1,18 @@
+  //For creating a json file use the command npm init.
+
+  //Now lets install a very interesting and small package known as figlet.
+    //For installing use npm i figlet
+
+ //Lets use figlet 
+
+
+ const figlet = require('figlet')
+
+ figlet('Ashwani Bhamya' , function( err , data){
+    if(err){
+        console.log("Something went wrong")
+    }
+    else{
+        console.log(data)
+    }
+ })

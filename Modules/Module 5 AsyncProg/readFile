@@ -1,0 +1,73 @@
+const fs = require('fs')
+const path = require('path')
+
+/*-------------------------------------------------------------------------------------------------------
+                       Synchronous*/
+
+// console.log('First Line')
+
+
+// let file1 = fs.readFileSync('file1.txt')
+// let file2 = fs.readFileSync('file2.txt')
+
+// console.log(file1 ,'\n', file2 )
+
+
+
+// console.log('Second Line')
+
+/*Comment the Synchronous code before running below code-----------------------------------------------------------
+        
+                       Asynchronous          */
+
+
+console.log('First Line')
+
+
+fs.readFile('file1.txt' ,'utf8', cb1 =(err , data) =>  {
+    if(err){
+        console.log('There ia an error')
+    }
+    else{
+        console.log(data)
+    }
+})
+
+
+fs.readFile('file2.txt' ,'utf8', cb2 =(err , data) =>  {
+    if(err){
+        console.log('There ia an error')
+    }
+    else{
+        console.log(data)
+    }
+})
+
+
+fs.readFile('file3.txt' ,'utf8', cb3 =(err , data) =>  {
+    if(err){
+        console.log('There ia an error')
+    }
+    else{
+        console.log(data)
+    }
+})
+
+
+console.log('Second Line')
+
+/*  1st Obsevation -  The output in this case is Asynchronous , so output is like smaller 
+                      programs first and then larger programs. This is a parallel execution.
+    
+    2nd Obsevation -  Every execution gives different order of output for file 1 2 and 3.
+                      Take note of this point and we shall discuss about this later.       */
+
+                    
+
+                     
+
+
+
+
+
+
